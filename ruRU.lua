@@ -1,4 +1,4 @@
---Coutesy of Hubbotu. Thank you!    --Translator: Hubbotu as of 1.1.0 
+--Coutesy of Hubbotu. Thank you!    --Translator: Hubbotu as of 1.1.0a 
 
 if not (GetLocale() == "ruRU") then
     return;
