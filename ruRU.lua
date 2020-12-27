@@ -1,4 +1,4 @@
---Coutesy of Hubbotu. Thank you!    --Translator: Hubbotu as of 1.1.0a 
+--Coutesy of Hubbotu. Thank you!    --Translator: Hubbotu as of 1.1.0g
 
 if not (GetLocale() == "ruRU") then
     return;
@@ -292,7 +292,7 @@ L["Remove"] = "Удалить";
 L["Rename"] = "Переименовать";
 L["Refresh Model"] = "Обновить Модель";
 L["Toggle Browser"] = "Переключить заклинание визуального браузера";
-L["Next And Previous"] = "ЛКМ: Перейти к следующему\nПКМ: Перейти к предыдущем";
+L["Next And Previous"] = NARCI_MOUSE_BUTTON_ICON_1.."Перейти к следующему\n"..NARCI_MOUSE_BUTTON_ICON_2.."Перейти к предыдущему";
 L["New Favorite"] = "Новое в избранном";
 L["Favorites Add"] = "Добавить в избранное";
 L["Favorites Remove"] = "Удалить из избранного";
