@@ -1,4 +1,4 @@
---Coutesy of Hubbotu. Thank you!    --Translator: Hubbotu as of 1.1.0g
+--Coutesy of Hubbotu. Thank you!    --Translator: Hubbotu as of 1.1.1
 
 if not (GetLocale() == "ruRU") then
     return;
@@ -219,6 +219,8 @@ L["Camera Transition"] = "Переход камеры";
 L["Camera Transition Description On"] = "Камера плавно переместится в заданное положение, когда вы откроете панель персонажа.";
 L["Camera Transition Description Off"] = "Переход камеры становится мгновенным. Начинается со второго использования панели персонажа.\nМгновенный переход отменяет предустановку камеры #4.";
 L["Interface Options Tab Description"] = "Вы также можете получить доступ к этой панели, нажав кнопку с шестеренкой рядом с панелью инструментов в левом нижнем углу экрана при использовании Narcissus.";
+L["Soulbinds"] = COVENANT_PREVIEW_SOULBINDS;
+L["Conduit Tooltip"] = "Эффекты более высоких рангов";
 
 --Model Control--
 NARCI_HOLD_WEAPON = "С Оружием";
@@ -353,6 +355,8 @@ L["Don't Update Items"] = "Не обновляйте предметы";
 L["Update Talents"] = "Обновление Талантов";
 L["Don't Update Talents"] = "Не обновляйте таланты";
 L["Old Icon"] = "Старая Иконка";
+L["NavBar Saved Sets"] = "Сохранено";   --A Saved Equipment Set
+L["NavBar Incomplete Sets"] = INCOMPLETE;
 NARCI_ICON_SELECTOR = "Переключатель Иконок";
 NARCI_DELETE_SET_WITH_LONG_CLICK = "Удалить Набор\n|cff808080(нажмите и удерживайте кнопку)|r";
 
