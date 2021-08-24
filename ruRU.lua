@@ -1,4 +1,4 @@
---Coutesy of Hubbotu. Thank you!    --Translator: Hubbotu as of 1.1.4
+--Coutesy of Hubbotu. Thank you!    --Translator: Hubbotu as of 1.1.5
 
 if not (GetLocale() == "ruRU") then
     return;
@@ -521,3 +521,4 @@ L["Mythic Plus Abbrev"] = "М+";
 L["Total Runs"] = "Всего заходов: ";
 L["Complete In Time"] = "Во время";
 L["Complete Over Time"] = "Не во время";
+L["Runs"] = "Заход";
