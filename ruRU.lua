@@ -1,33 +1,10 @@
---Coutesy of Hubbotu. Thank you!    --Translator: Hubbotu as of 1.1.5
+--Coutesy of Hubbotu. Thank you!    --Translator: Hubbotu as of 1.1.6
 
 if not (GetLocale() == "ruRU") then
     return;
 end
 
 local L = Narci.L;
-
-NARCI_GRADIENT = "|cffA236EFN|r|cff9448F1a|r|cff865BF2r|r|cff786DF4c|r|cff6A80F6i|r|cff5D92F7s|r|cff4FA4F9s|r|cff41B7FAu|r|cff33C9FCs|r"
-MYMOG_GRADIENT = "|cffA236EFM|cff9448F1y |cff865BF2T|cff786DF4r|cff6A80F6a|cff5D92F7n|cff4FA4F9s|cff41B7FAm|cff33C9FCo|cff32c9fbg|r"
-
-NARCI_VERSION_INFO = "1.1.4";
-NARCI_DEVELOPER_INFO = "Разработано Peterodox";
-
-NARCI_NEW_ENTRY_PREFIX = "|cff40C7EB";
-NARCI_COLOR_GREY_85 = "|cffd8d8d8";
-NARCI_COLOR_GREY_70 = "|cffb3b3b3";
-NARCI_COLOR_RED_MILD = "|cffff5050";
-NARCI_COLOR_GREEN_MILD = "|cff7cc576";
-NARCI_COLOR_YELLOW = "|cfffced00";
-NARCI_COLOR_CYAN_DARK = "5385a5";
-NARCI_COLOR_PINK_DARK = "da9bc3";
-
-NARCI_MODIFIER_CONTROL = "Ctrl";
-NARCI_MODIFIER_ALT = "Alt";   --Windows
-NARCI_SHORTCUTS_COPY = "Ctrl+C";
-
-NARCI_MOUSE_BUTTON_ICON_1 = "|TInterface\\AddOns\\Narcissus\\Art\\Keyboard\\Mouse-Small:16:16:0:0:64:16:0:16:0:16|t";   --Left Button
-NARCI_MOUSE_BUTTON_ICON_2 = "|TInterface\\AddOns\\Narcissus\\Art\\Keyboard\\Mouse-Small:16:16:0:0:64:16:16:32:0:16|t";   --Right Button
-NARCI_MOUSE_BUTTON_ICON_3 = "|TInterface\\AddOns\\Narcissus\\Art\\Keyboard\\Mouse-Small:16:16:0:0:64:16:32:48:0:16|t";   --Middle Button
 
 if IsMacClient() then
     --Mac OS
@@ -411,6 +388,10 @@ L["Show Unearned Mark Description"] = "Отметьте достижения, к
 L["Show Dates"] = "Показать даты";
 L["Hide Dates"] = "Скрыть даты";
 
+L["Pinned Entries"] = "Закрепленные записи";
+L["Pinned Entry Format"] = "Закреплено  %d/%d";
+
+
 --Barbershop--
 L["Save New Look"] = "Сохранить новый вид";
 L["No Available Slot"] = "Нет доступного слота";
@@ -452,7 +433,7 @@ L["Guide NPC Browser Line1"] = "Известные НПС перечислены
 
 --Splash--
 NARCI_SPLASH_WHATS_NEW_FORMAT = "Что нового в Narcissus %s";
-L["See Ads"] = "Смотрите рекламу нашего настоящего спонсора";    --Not real ads!
+
 L["Splash Category1"] = L["Фото Режим"];
 L["Splash Content1 Name"] = "Оружие";
 L["Splash Content1 Description"] = "-Просматривайте и используйте все оружие в базе данных, в том числе то, которое не может быть получено игроками.";
@@ -472,7 +453,7 @@ L["Splash Content7 Description"] = "-Граница шестиугольника
 
 --Project Details--
 NARCI_ALL_PROJECTS = "Все проекты";
-NARCI_PROJECT_DETAILS = "|cFFFFD100Разработчик: Peterodox\nДата выхода: 26 Октябрь, 2020|r\n\nСпасибо, что используете этот аддон! Если у вас есть какие-либо вопросы, предложения, идеи, пожалуйста, оставьте комментарий на странице curseforge или свяжитесь со мной по адресу...";
+NARCI_PROJECT_DETAILS = "|cFFFFD100Разработчик: Peterodox\nДата выхода: 23 август, 2021|r\n\nСпасибо, что используете этот аддон! Если у вас есть какие-либо вопросы, предложения, идеи, пожалуйста, оставьте комментарий на странице curseforge или свяжитесь со мной по адресу...";
 NARCI_PROJECT_AAA_TITLE = "|cff008affA|cff0d8ef2z|cff1a92e5e|cff2696d9r|cff339acco|cff409ebft|cff4da1b2h |cff59a5a6A|cff66a999d|cff73ad8cv|cff7fb180e|cff8cb573n|cff99b966t|cffa6bd59u|cffb2c14dr|cffbfc440e |cffccc833A|cffd9cc26l|cffe5d01ab|cfff2d40du|cffffd800m";
 NARCI_PROJECT_AAA_SUMMARY = "Исследуйте достопримечательности и собирайте знания и фотографии со всего Азерота.|cff636363";
 NARCI_PROJECT_NARCISSUS_SUMMARY = "Захватывающая панель персонажа и ваш лучший скриншот.";
@@ -518,7 +499,18 @@ L["Extract Shard"] = "Извлечь осколок";
 --Mythic+ Leaderboard--
 L["Mythic Plus"] = "Мифический+";
 L["Mythic Plus Abbrev"] = "М+";
-L["Total Runs"] = "Всего заходов: ";
+L["Total Runs"] = "Всего забегов: ";
 L["Complete In Time"] = "Во время";
 L["Complete Over Time"] = "Не во время";
-L["Runs"] = "Заход";
+L["Runs"] = "Забег";
+
+--Equipment Upgrade--
+L["At Level"] = "На уровне %d:";      --Enchants scale with player level
+L["No Item Alert"] = "Нет совместимых предметов";
+
+--Statistics--
+Narci.L.S = {};
+local S = Narci.L.S;
+S["Narcissus Played"] = "Общее время, проведенное в Narcissus";
+S["Format Since"] = "(поскольку %s)";
+S["Screenshots"] = "Скриншоты, сделанные в Narcissus";
