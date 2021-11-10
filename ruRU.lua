@@ -512,5 +512,5 @@ L["No Item Alert"] = "Нет совместимых предметов";
 Narci.L.S = {};
 local S = Narci.L.S;
 S["Narcissus Played"] = "Общее время, проведенное в Narcissus";
-S["Format Since"] = "(поскольку %s)";
+S["Format Since"] = "(на %s)";
 S["Screenshots"] = "Скриншоты, сделанные в Narcissus";
