@@ -1,4 +1,4 @@
---Coutesy of Hubbotu. Thank you!    --Translator: Hubbotu as of 1.1.6
+--Coutesy of ZamestoTV. Thank you!    --Translator: ZamestoTV as of 1.1.6
 
 if not (GetLocale() == "ruRU") then
     return;
