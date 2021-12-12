@@ -514,7 +514,7 @@ L["Owned"] = "Персональный";                           --Only show o
 L["At Level"] = "На уровне %d:";      --Enchants scale with player level
 L["No Item Alert"] = "Нет совместимых предметов";
 L["Click to Insert"] = "Нажмите, чтобы вставить";       --Insert a gem
-L["No Socket"] = "Нет гнезда";
+L["No Socket"] = "Нет гнезд";
 L["No Other Item For Slot"] = "Нет другого предмета для %s";       --where %s is the slot name
 L["In Bags"] = "В сумках";
 
