@@ -1,10 +1,11 @@
---Coutesy of ZamestoTV. Thank you!    --Translator: ZamestoTV as of 1.1.6
+--Coutesy of ZamestoTV. Thank you!    --Translator: ZamestoTV as of 1.1.7
 
 if not (GetLocale() == "ruRU") then
     return;
 end
 
 local L = Narci.L;
+local S = Narci.L.S;
 
 if IsMacClient() then
     --Mac OS
@@ -295,6 +296,9 @@ L["Use Your Model"] = "Используйте вашу модель";
 L["Cannot Inspect Target"] = "Невозможно проверить цель"
 L["External Link"] = "Внешняя Ссылка";
 L["Add to MogIt Wishlist"] = "Добавить в список желаний MogIt";
+L["Show Taint Solution"] = "Как решить эту проблему?";
+L["Taint Solution Step1"] = "1. Перезагрузите свой интерфейс.";
+L["Taint Solution Step2"] = "2. "..NARCI_MODIFIER_CONTROL.." + ЛКМ по предмету, чтобы открыть гардеробную.";
 
 --NPC Browser--
 NARCI_NPC_BROWSER_TITLE_LEVEL = ".*%?%?.?";      --Level ?? --Use this to check if the second line of the tooltip is NPC's title or unit type
@@ -505,12 +509,16 @@ L["Complete Over Time"] = "Не во время";
 L["Runs"] = "Забег";
 
 --Equipment Upgrade--
+L["Temp Enchant"] = "Временные чары";       --ERR_TRADE_TEMP_ENCHANT_BOUND
+L["Owned"] = "Персональный";                           --Only show owned items
 L["At Level"] = "На уровне %d:";      --Enchants scale with player level
 L["No Item Alert"] = "Нет совместимых предметов";
+L["Click to Insert"] = "Нажмите, чтобы вставить";       --Insert a gem
+L["No Socket"] = "Нет гнезда";
+L["No Other Item For Slot"] = "Нет другого предмета для %s";       --where %s is the slot name
+L["In Bags"] = "В сумках";
 
 --Statistics--
-Narci.L.S = {};
-local S = Narci.L.S;
 S["Narcissus Played"] = "Общее время, проведенное в Narcissus";
 S["Format Since"] = "(на %s)";
 S["Screenshots"] = "Скриншоты, сделанные в Narcissus";
