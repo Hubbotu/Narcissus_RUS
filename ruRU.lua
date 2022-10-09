@@ -7,6 +7,28 @@ end
 local L = Narci.L;
 local S = Narci.L.S;
 
+NARCI_GRADIENT = "|cffA236EFN|r|cff9448F1a|r|cff865BF2r|r|cff786DF4c|r|cff6A80F6i|r|cff5D92F7s|r|cff4FA4F9s|r|cff41B7FAu|r|cff33C9FCs|r"
+MYMOG_GRADIENT = "|cffA236EFM|cff9448F1y |cff865BF2T|cff786DF4r|cff6A80F6a|cff5D92F7n|cff4FA4F9s|cff41B7FAm|cff33C9FCo|cff32c9fbg|r"
+
+NARCI_DEVELOPER_INFO = "Developed by Peterodox";
+
+NARCI_NEW_ENTRY_PREFIX = "|cff40C7EB";
+NARCI_COLOR_GREY_85 = "|cffd8d8d8";
+NARCI_COLOR_GREY_70 = "|cffb3b3b3";
+NARCI_COLOR_RED_MILD = "|cffff5050";
+NARCI_COLOR_GREEN_MILD = "|cff7cc576";
+NARCI_COLOR_YELLOW = "|cfffced00";
+NARCI_COLOR_CYAN_DARK = "5385a5";
+NARCI_COLOR_PINK_DARK = "da9bc3";
+
+NARCI_MODIFIER_CONTROL = "Ctrl";
+NARCI_MODIFIER_ALT = "Alt";   --Windows
+NARCI_SHORTCUTS_COPY = "Ctrl+C";
+
+NARCI_MOUSE_BUTTON_ICON_1 = "|TInterface\\AddOns\\Narcissus\\Art\\Keyboard\\Mouse-Small:16:16:0:0:64:16:0:16:0:16|t";   --Left Button
+NARCI_MOUSE_BUTTON_ICON_2 = "|TInterface\\AddOns\\Narcissus\\Art\\Keyboard\\Mouse-Small:16:16:0:0:64:16:16:32:0:16|t";   --Right Button
+NARCI_MOUSE_BUTTON_ICON_3 = "|TInterface\\AddOns\\Narcissus\\Art\\Keyboard\\Mouse-Small:16:16:0:0:64:16:32:48:0:16|t";   --Middle Button
+
 if IsMacClient() then
     --Mac OS
 	NARCI_MODIFIER_CONTROL = "Команды";
@@ -14,8 +36,8 @@ if IsMacClient() then
     NARCI_SHORTCUTS_COPY = "Команда+C";
 end
 
-NARCI_WORDBREAK_COMMA = ", ";
-
+NARCI_WORDBREAK_COMMA = ", ";		
+					 
 --Date--
 L["Today"] = COMMUNITIES_CHAT_FRAME_TODAY_NOTIFICATION;
 L["Yesterday"] = COMMUNITIES_CHAT_FRAME_YESTERDAY_NOTIFICATION;
@@ -253,8 +275,8 @@ L["Reset"] = "Сброс";
 L["Actor Index"] = "Индекс";
 L["Move To Font"] = "|cff40c7ebПеред|r";
 L["Actor Index Tooltip"] = "Перетащите кнопку индекса, чтобы изменить слой модели.";
-L["Play Button Tooltip"] = "ЛКМ: воспроизвести эту анимацию\nПКМ: Возобновить все модели\' анимации";
-L["Pause Button Tooltip"] = "ЛКМ: Приостановите эту анимацию\nПКМ: Приостановка всех моделей\' анимаций";
+L["Play Button Tooltip"] = NARCI_MOUSE_BUTTON_ICON_1.."Воспроизвести эту анимацию\n"..NARCI_MOUSE_BUTTON_ICON_2.."Возобновить все модели\' анимации";
+L["Pause Button Tooltip"] = NARCI_MOUSE_BUTTON_ICON_1.."Приостановить эту анимацию\n"..NARCI_MOUSE_BUTTON_ICON_2.."Приостановить все модели\' анимации";
 L["Save Layers"] = "Сохранение Слоев";
 L["Save Layers Tooltip"] = "Автоматический захват 6 скриншотов для композиции изображения.\nПожалуйста, не перемещайте курсор и не нажимайте никаких кнопок во время этого процесса. В противном случае ваш персонаж может стать невидимым после выхода из аддона. Если это произойдет, используйте эту команду:\n/console showplayer";
 L["Ground Shadow"] = "Тень на Земле";
@@ -397,7 +419,7 @@ L["Proc Versatility"] =  "Прок "..STAT_VERSATILITY;
 
 L["Critical Damage"] = CRIT_ABBR.."DMG";
 
-L["Corruption Effect Format1"] = "Уменьшение скорости на |cffffffff%s%%|r";
+L["Corruption Effect Format1"] = "|cffffffff%s%%|r Уменьшение скорости на";
 L["Corruption Effect Format2"] = "|cffffffff%s|r начальный урон\n|cffffffff%s ярдов|r радиус";
 L["Corruption Effect Format3"] = "|cffffffff%s|r повреждение\n|cffffffff%s%%|r вашего HP";
 L["Corruption Effect Format4"] = "Поражение потусторонней тварью накладывает другие дебаффы";
@@ -454,8 +476,8 @@ L["Failure Reason Decode"] = "Не удалось расшифровать.";
 L["Failure Reason Wrong Character"] = "Текущая раса/пол/форма не соответствует импортированному профилю.";
 L["Failure Reason Dragonriding"] = "Этот профиль для Dragonriding.";
 L["Wrong Character Format"] = "Требует %s %s."; --e.g. Rquires Male Human
-L["Import Lack Option"] = "%d |4option:опции; не были найдены.";
-L["Import Lack Choice"] = "%d |4choice:выбор; не были найдены.";
+L["Import Lack Option"] = "%d |4option:options; не были найдены.";
+L["Import Lack Choice"] = "%d |4choice:choices; не были найдены.";
 L["Decode Good"] = "Декодировано успешно.";
 L["Barbershop Export Tooltip"] = "Кодирует текущую настройку в строку, которой можно поделиться в Интернете.\n\nВы можете изменить любой текст перед двоеточием (:)";
 L["Settings And Share"] = (SETTINGS or "Настройки") .." & ".. (SOCIAL_SHARE_TEXT or "Поделиться");
@@ -506,7 +528,7 @@ L["Splash Content7 Description"] = "-Граница шестиугольника
 
 --Project Details--
 NARCI_ALL_PROJECTS = "Все проекты";
-NARCI_PROJECT_AAA_TITLE = "|cff008affA|cff0d8ef2z|cff1a92e5e|cff2696d9r|cff339acco|cff409ebft|cff4da1b2h |cff59a5a6A|cff66a999d|cff73ad8cv|cff7fb180e|cff8cb573n|cff99b966t|cffa6bd59u|cffb2c14dr|cffbfc440e |cffccc833A|cffd9cc26l|cffe5d01ab|cfff2d40du|cffffd800m";
+NARCI_PROJECT_AAA_TITLE = "|cff008affA|cff0d8ef2z|cff1a92e5e|cff2696d9r|cff339acco|cff409ebft|cff4da1b2h |cff59a5a6A|cff66a999d|cff73ad8cv|cff7fb180e|cff8cb573n|cff99b966t|cffa6bd59u|cffb2c14dr|cffbfc440e |cffccc833A|cffd9cc26l|cffe5d01ab|cfff2d40du|cffffd800m|r";
 NARCI_PROJECT_AAA_SUMMARY = "Исследуйте достопримечательности и собирайте знания и фотографии со всего Азерота.|cff636363";
 NARCI_PROJECT_NARCISSUS_SUMMARY = "Захватывающая панель персонажа и ваш лучший скриншот.";
 
@@ -528,7 +550,7 @@ L["A4"] = "Просто откройте Настройки, а затем пе�
 --Search--
 L["Search Result Singular"] = "%s результат";
 L["Search Result Plural"] = "%s результатов";
-L["Search Result Overflow"] = "более %s результатов";
+L["Search Result Overflow"] = "%s+ результатов";
 L["Search Result None"] = CLUB_FINDER_APPLICANT_LIST_NO_MATCHING_SPECS;
 
 --Weapon Browser--
