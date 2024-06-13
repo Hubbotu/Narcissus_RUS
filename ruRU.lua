@@ -1,4 +1,4 @@
---Coutesy of ZamestoTV. Thank you!    --Translator: ZamestoTV as of 1.6.3
+--Coutesy of ZamestoTV. Thank you!    --Translator: ZamestoTV as of 1.6.4
 
 if not (GetLocale() == "ruRU") then
     return;
@@ -727,12 +727,6 @@ L["Perks Program See Wares"] = "Показать товары";
 L["Perks Program No Cache Alert"] = "Поговорите с продавцами торговой лавки, чтобы увидеть товары этого месяца.";
 L["Perks Program Using Cache Alert"] = "Использование кеша с вашего последнего посещения. Данные о цене могут быть неточными.";
 L["Modify Default Pose"] = "Изменить позу по умолчанию";   --Change the default pose/animation/camera yaw when viewing transmog items
-L["Include Header"] = "Включает:";  --The transmog set includes...
-L["Auto Try On All Items"] = "Автоматическая примерка всех предметов";
-L["Full Set Cost"] = "Стоимость полного комплекта";   --Purchasing the full set will cost you x Trader's Tender
-L["You Will Receive One Item"] = "Вы получите |cffffffffОДИН|r предмет:";
-L["Format Item Belongs To Set"] = "Этот предмет входит в набор трансмогрификации |cffffffff[%s]|r";
-
 
 --Quest--
 L["Auto Display Quest Item"] = "Автоматическое отображение описаний предметов заданий";
